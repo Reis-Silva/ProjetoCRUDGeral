@@ -9,7 +9,7 @@ import br.com.carros.util.excessao.ErroSistema;
 public class FabricaConexao {
 	
 	private static Connection conexao;
-	private static final String URL_CONEXAO = "jdbc:mysql://localhost:3306/sistema-carros?useTimezone=true&serverTimezone=UTC";
+	private static final String URL_CONEXAO = "jdbc:mysql://localhost:3306/genericBD?useTimezone=true&serverTimezone=UTC";
 	private static final String USUARIO = "root";
 	private static final String SENHA = "1234";
 	
