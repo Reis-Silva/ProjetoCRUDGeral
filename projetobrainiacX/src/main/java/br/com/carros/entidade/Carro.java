@@ -10,6 +10,13 @@ public class Carro{
 	private String cor;
 	private Date ano;
 	
+
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getModelo() {
 		return modelo;
 	}
@@ -34,12 +41,7 @@ public class Carro{
 	public void setAno(Date ano) {
 		this.ano = ano;
 	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

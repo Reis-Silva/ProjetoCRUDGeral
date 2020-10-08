@@ -1,5 +1,6 @@
 package br.com.carros.util.excessao;
 
+
 public class ErroSistema extends Exception{
 	
 	public ErroSistema(String message) {
