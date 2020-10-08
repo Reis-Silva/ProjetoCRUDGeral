@@ -38,7 +38,7 @@ public class FabricaConexao {
 				conexao.close();
 				conexao = null;
 			} catch (SQLException ex) {
-				throw new ErroSistema("Erro ao fechar conexão com banco de dadoss", ex);
+				throw new ErroSistema("Erro ao fechar conexão com o banco de dados", ex);
 			}
 			
 		}
