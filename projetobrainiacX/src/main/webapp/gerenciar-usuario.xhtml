@@ -21,7 +21,7 @@
 		<p:fieldset legend="Gerenciar Usuário">
 			<p:toolbar>
 				<p:toolbarGroup align="left">
-					<p:commandButton value="Novo" action="#{usuarioBean.novo}"
+					<p:commandButton value="Novo" action="#{usuarioBean.novo()}"
 						update="@form " />
 					<p:commandButton value="Salvar" action="#{usuarioBean.salvar}"
 						update="@form " disabled="#{usuarioBean.busca == true}" />
