@@ -4,34 +4,33 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui"
-	template="index.xhtml">
+	xmlns:p="http://primefaces.org/ui" template="index.xhtml">
 
+<h:form id="form">
+	<h:head>
+		<title>Sistemas Carros</title>
+	</h:head>
 
-<h:head>
-	<title>Sistemas Carros</title>
-</h:head>
-	
 	<div align="center">
 		<h3>Bem vindo ao sistema para controles de Carros</h3>
 		<p:graphicImage library="imagens" name="cadastro.png" width="300" />
 	</div>
+
+
 	
-	
-	<h:form id="form">
-		<p:messages autoUpdate="true"/>
+		<p:messages autoUpdate="true" />
 		<p:fieldset legend="Gerenciamento de Carros">
 			<p:toolbar>
 				<p:toolbarGroup align="left">
 					<p:commandButton value="Novo" action="#{carroBean.novo}"
-						update="@form tabelaCar " />
+						update="form:tabelaCar " />
 					<p:commandButton value="Salvar" action="#{carroBean.salvar}"
-						update="@form tabelaCar" disabled="#{carroBean.busca == true}" />
+						update="form:tabelaCar" disabled="#{carroBean.busca == true}" />
 					<p:commandButton value="Buscar" action="#{carroBean.buscar}"
-						update="@form tabelaCar" />
+						update="form:tabelaCar" />
 				</p:toolbarGroup>
 			</p:toolbar>
-			
+
 			<p:panelGrid columns="2" rendered="#{carroBean.busca == false}">
 				<h:outputLabel value="Modelo" />
 				<p:inputText value="#{carroBean.entidade.modelo}" />
@@ -43,30 +42,36 @@
 				<p:inputText value="#{carroBean.entidade.cor}" />
 
 				<h:outputLabel value="Ano" />
-				<p:calendar value="#{carroBean.entidade.ano}" mode="popup" pattern="MM/dd/yyyy" />
+				<p:calendar value="#{carroBean.entidade.ano}" mode="popup"
+					pattern="MM/dd/yyyy" />
 			</p:panelGrid>
-			
-			<p:dataTable value="#{carroBean.entidades}" var="car" id="tabelaCar" rendered="#{carroBean.busca == true}">
+
+			<p:dataTable value="#{carroBean.entidades}" var="car" id="tabelaCar"
+				rendered="#{carroBean.busca == true}">
 				<p:column>
-					<p:commandButton value="Editar"
-							action="#{carroBean.editar(car)}" update="form " />
+					<p:commandButton value="Editar" action="#{carroBean.editar(car)}"
+						update="form " />
 				</p:column>
 				<p:column>
-					<p:commandButton value="Deletar"
-							action="#{carroBean.deletar(car)}" update="form " />
+					<p:commandButton value="Deletar" action="#{carroBean.deletar(car)}"
+						update="form " />
 				</p:column>
-				
-				<p:column headerText="Modelo" sortBy="#{car.modelo}">#{car.modelo}</p:column>
-				<p:column headerText="Fabricante" sortBy="#{carro.fabricante}">#{car.fabricante}</p:column>
-				<p:column headerText="Cor" sortBy="#{car.cor}">#{car.cor}</p:column>
+
+				<p:column headerText="Modelo" sortBy="#{car.modelo}">
+					<h:outputLabel value="#{car.modelo}" />
+				</p:column>
+				<p:column headerText="Fabricante" sortBy="#{carro.fabricante}">
+					<h:outputLabel value="#{car.fabricante}" />
+				</p:column>
+				<p:column headerText="Cor" sortBy="#{car.cor}">
+					<h:outputLabel value="#{car.cor}" />
+				</p:column>
 				<p:column headerText="Ano">
 					<h:outputLabel value="#{car.ano}">
-						<f:convertDateTime pattern="dd/MM/yyyy"/>
+						<f:convertDateTime pattern="dd/MM/yyyy" />
 					</h:outputLabel>
 				</p:column>
 			</p:dataTable>
-
-
 		</p:fieldset>
 	</h:form>
 
