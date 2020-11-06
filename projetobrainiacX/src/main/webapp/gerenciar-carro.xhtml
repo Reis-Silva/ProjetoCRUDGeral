@@ -22,11 +22,11 @@
 		<p:fieldset legend="Gerenciamento de Carros">
 			<p:toolbar>
 				<p:toolbarGroup align="left">
-					<p:commandButton value="Novo" action="#{carroBean.novo}"
+					<p:commandButton value="Novo" action="#{carroBean.novo()}"
 						update="form:tabelaCar " />
-					<p:commandButton value="Salvar" action="#{carroBean.salvar}"
+					<p:commandButton value="Salvar" action="#{carroBean.salvar()}"
 						update="form:tabelaCar" disabled="#{carroBean.busca == true}" />
-					<p:commandButton value="Buscar" action="#{carroBean.buscar}"
+					<p:commandButton value="Buscar" action="#{carroBean.buscar()}"
 						update="form:tabelaCar" />
 				</p:toolbarGroup>
 			</p:toolbar>
