@@ -6,6 +6,8 @@ import br.com.carros.dao.CarroDAO;
 import br.com.carros.entidade.Carro;
 
 
+
+@SuppressWarnings("deprecation")
 @ManagedBean
 @SessionScoped
 public class CarroBean extends CrudBean<Carro,CarroDAO>{
