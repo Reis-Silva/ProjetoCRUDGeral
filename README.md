@@ -11,10 +11,10 @@ Projeto de Cadastro Geral sem ferramenta hibernate, podendo ser utilizado como b
 
 ## Observações:
 
-#### OBS: Possível realizar modificações generalizadas para qualquer outro tipo de modelo;
+- OBS: Possível realizar modificações generalizadas para qualquer outro tipo de modelo;
 
-#### OBS2: Utilizada a conexão com MySQL;
+- OBS2: Utilizada a conexão com MySQL;
 
-#### OBS3: Crie no MySQL o banco de dados "genericbd", com as "TABLES" "carro" e "usuarios", ou modifique o nome dentro do banco de dados na classe "FabricaConexão" e as "TABLES" "carro" e "usuarios" nas classes "CarroCRUD" e "UsuarioCRUD" respectivamente;
+- OBS3: Crie no MySQL o banco de dados "genericbd", com as "TABLES" "carro" e "usuarios", ou modifique o nome dentro da classe "FabricaConexão" e as "TABLES" "carro" e "usuarios" nas classes "CarroCRUD" e "UsuarioCRUD" respectivamente;
 
-#### OBS4: Usuário: root | Senha: 1234.
+- OBS4: Usuário: root | Senha: 1234.
